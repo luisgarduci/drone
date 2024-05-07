@@ -115,6 +115,17 @@ server.post('/adicionarRota', (req, res) => {
     });
 })
 
+server.post('/executar-rota', (req, res) => {
+    const {vetorteste} = req.body;
+    let rota = []
+    vetorteste.forEach(element => {
+        executar(element, 0);
+    })
+    
+    return res.send(vetorteste);
+    
+});
+
 server.get('/validarCadastro', (req, res) => {
     let nome = req.query.nome;
     sql.query("SELECT * FROM usuario WHERE nome = ?", [nome], (error, result) => {
