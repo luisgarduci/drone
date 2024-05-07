@@ -1,0 +1,33 @@
+Banco de Dados Drone
+
+create database drone;
+
+use drone;
+
+create table usuario (
+id_usuario int auto_increment,
+nome varchar(50) not null,
+senha varchar(50) not null,
+ocupacao varchar(10),
+turma varchar(25),
+Primary Key(id_usuario)
+);
+
+create table comandos (
+id_comando int auto_increment,
+id_rotas int,
+comando varchar(50) not null,
+velocidade int,
+tempoDuracaoComando int,
+Primary Key(id_comando),
+Foreign Key(id_rotas) REFERENCES rota(id_rotas)
+);
+
+create table rota (
+  id_rotas int auto_increment,
+  id_usuario int,
+  NomeRotas varchar(50),
+  descRotas varchar(50),
+  Primary Key(id_rotas),
+  Foreign key(id_usuario) REFERENCES usuario(id_usuario)
+);

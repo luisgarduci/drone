@@ -1,0 +1,44 @@
+Cadastro
+
+cadastrar.addEventListener("click", () => {
+           fetch(`http://127.0.0.1:7090/validarCadastro?nome=${nome.value}`)
+           .then(response => response.json())
+           .then((data) => {
+            if (data.length === 0) {
+                fetch('http://127.0.0.1:7090/cadastrar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        Nome: nome.value,
+                        Senha: senha.value,
+                        ocupacao: ocupacao.value,
+                        turma: turma.value
+                    })
+                })
+            }
+            else {
+                alert('Esse nome de usuário já existe.')
+            }
+           })
+        })
+
+Login
+
+let nome = document.getElementById("nome");
+let senha = document.getElementById("senha");
+let id;
+logar.addEventListener("click", () => {
+            fetch(`http://127.0.0.1:7090/logar?nome=${nome.value}&senha=${senha.value}`)
+            .then(response => response.json())
+            .then((data) => {
+                if (data.length > 0) {
+                    id = data[0]['id_usuario'];
+                    window.location.href = `comandos.html?id=${id}`;
+                }
+                else {
+                    alert ("Você não possui uma conta")
+                }
+            })
+        })

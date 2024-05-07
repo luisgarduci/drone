@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: white;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.button1 {
+    color: white;
+    padding: 65px 100px;
+    border: black;
+    border-radius: 20px;
+    background-image: url(UpStatic.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 255, 255);
+    background-size: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-image: url(UpMov.gif);
+    color: white;
+    padding: 65px 100px;
+    border: black;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 255, 255);
+    background-size: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.button1:active {
+    background-image: url(UpMov.png);
+    color: white;
+    padding: 65px 100px;
+    border: black;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 255, 255);
+    background-size: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.button2 {
+    color: white;
+    padding: 65px 100px;
+    border: black;
+    border-radius: 20px;
+    background-image: url(DownStatic.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 255, 255);
+    background-size: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-image: url(DownMov.gif);
+    color: white;
+    padding: 65px 100px;
+    border: black;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 255, 255);
+    background-size: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.button2:active {
+    background-image: url(DownMov.png);
+    color: white;
+    padding: 65px 100px;
+    border: black;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 255, 255);
+    background-size: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}

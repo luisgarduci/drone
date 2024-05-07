@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container2">
+        <form id="logar">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nome</label>
+            <input type="name" class="form-control" id="nome" aria-describedby="name" placeholder="Seu nome"
+              required>
+    
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Senha</label>
+            <input type="password" class="form-control" id="senha" aria-describedby="name" placeholder="Sua senha"
+              required>
+    
+          </div>
+          <button type="submit"></button>
+          </form>
+          <script>
+            let nome = document.getElementById("nome");
+let senha = document.getElementById("senha");
+let id;
+let logar = document.getElementById("logar");
+logar.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(`http://127.0.0.1:8080/logar?nome=${nome.value}&senha=${senha.value}`)
+            .then(response => response.json())
+            .then((data) => {
+                if (data.length > 0) {
+                    id = data[0]['id_usuario'];
+                    window.location.href = `comandos.html?id=${id}`;
+                }
+                else {
+                    alert ("Você não possui uma conta");
+                }
+            })
+        })
+          </script>
+</body>
+</html>
