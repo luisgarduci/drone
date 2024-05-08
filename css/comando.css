@@ -79,7 +79,9 @@ main > .comandos {
     cursor: pointer;
   }
 
-  main > .container-comandos > .container-btn > button{
+  main > .container-comandos > #executar{
+  margin: auto;
+  display: block;
    margin-top: 20px;
    padding: 8px;
    border-radius: 8px;
@@ -87,19 +89,7 @@ main > .comandos {
    cursor: pointer;
    font-size: 18px;
   }
-
-  main > .container-comandos > .container-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-
-  main > .container-comandos > .container-btn > #excluir {
-    background-color: red;
-    color: white;
-  }
-
+  
   main > .container-comandos > #listaComandos > .container:hover {
      background-color: lightgray;
   }
