@@ -79,9 +79,9 @@ main > .comandos {
     cursor: pointer;
   }
 
-  main > .container-comandos > #executar {
-   margin: auto;
-   display: block;
+  main > .container-comandos > #executar{
+  margin: auto;
+  display: block;
    margin-top: 20px;
    padding: 8px;
    border-radius: 8px;
@@ -89,7 +89,7 @@ main > .comandos {
    cursor: pointer;
    font-size: 18px;
   }
-
+  
   main > .container-comandos > #listaComandos > .container:hover {
      background-color: lightgray;
   }

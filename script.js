@@ -76,6 +76,7 @@ adicionar.addEventListener("click", () => {
 Velocidade = range.value;
 vetorComandos.push({Comando: comando, Velocidade: Velocidade, Tempo: tempo.value})
 comando = "";
+   alert("Comando Adicionado")
 })
 
 //Cadastrando Rota
@@ -93,7 +94,9 @@ cadastrar.addEventListener('click', () => {
     }).then(response => response.json())
       .then((data) => {
         
-      })  
+      })
+   alert("Rota Cadastrada")
+   //window.location.reload();
 })
 
 //Obtendo todos os Comandos
@@ -119,9 +122,13 @@ data.forEach(element => {
 
 rotas = document.querySelectorAll(".rotas")
 rotas.forEach(rota => {
-  rota.addEventListener("click", () => {
+  rota.addEventListener("click", (e) => {
     vetorteste = [];
     let id_rota = rota.getAttribute("data-post-id");
+     for (let i = 0; i < rotas.length; i++) {
+      rotas[i].style.border = "1px solid black"
+    }
+    e.currentTarget.style.border = "5px solid blue"
     fetch(`http://127.0.0.1:8080/selecionarComandos?id_rota=${id_rota}`)
     .then(response => response.json())
     .then((data) => {
