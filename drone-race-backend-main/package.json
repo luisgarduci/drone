@@ -1,0 +1,40 @@
+{
+  "name": "@harleylara/tello-js",
+  "version": "1.1.2",
+  "description": "A minimalist Javascript library for programming Tello drones.",
+  "main": "./src/index.js",
+  "scripts": {
+    "tello": "node ./src/cli.js",
+    "tello-server": "node ./src/tello-server.js",
+    "start": "nodemon ./src/autotello.js"
+  },
+  "bin": {
+    "tello": "./src/cli.js",
+    "tello-server": "./src/tello-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harleylara/tello-js.git"
+  },
+  "keywords": [
+    "tello",
+    "drone",
+    "ryze",
+    "dji"
+  ],
+  "author": "Harley Lara",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/harleylara/tello-js/issues"
+  },
+  "homepage": "https://github.com/harleylara/tello-js",
+  "dependencies": {
+    "commander": "^10.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "ffmpeg-static": "^5.1.0",
+    "mysql2": "^3.9.7",
+    "nodemon": "^3.1.0",
+    "ws": "^8.6.0"
+  }
+}
